@@ -1,6 +1,6 @@
 :root {
     --header-color: #01a3a4;
-    --bg-color: #eee;
+    --bg-color: #ddd6d6;
 }
 
 * {
@@ -55,6 +55,7 @@ header .container {
     display: inline-block;
     margin-top: 24px;
     text-decoration: none;
+    margin-bottom: 10px;
 }
 
 .numbers {
@@ -69,4 +70,18 @@ header .container {
 
 .numbers-item h4 {
     font-size: .3em;
+}
+
+.container h3 {
+    margin-top: 8px;
+    font-size: 22px;
+}
+
+.numbers-item a {
+    font-size: 16px;
+    margin:  none ;
+}
+
+.texto {
+    font-size: 15px;
 }
