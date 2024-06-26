@@ -68,39 +68,39 @@ header .container {
     font-size: 3em;
     font-weight: bold;
     align-content: center;
-    display: grid; /* Added display grid */
+    display: grid;
     grid-template-areas: 
         "img"
         "a"
-        "span"; /* Set grid areas */
-    gap: 4px; /* Add some gap if needed */
+        "span";
+    gap: 4px;
 }
 
 .numbers-item img, .numbers-item-broke img {
-    width: 160px; /* Define a largura da imagem */
-    height: 100px; /* Define a altura da imagem */
-    grid-area: img; /* Assign grid area */
-    justify-self: center; /* Center horizontally */
-    align-self: center; /* Center vertically */
+    width: 160px;
+    height: 100px;
+    grid-area: img;
+    justify-self: center;
+    align-self: center;
 }
 
 .numbers-item a, .numbers-item-broke a {
     font-size: 16px;
-    grid-area: a; /* Assign the grid area */
-    justify-self: center; /* Center horizontally */
-    align-self: center; /* Center vertically */
+    grid-area: a;
+    justify-self: center;
+    align-self: center;
 }
 
 .numbers-item span, .numbers-item-broke span {
     font-size: 15px;
-    grid-area: span; /* Assign grid area */
+    grid-area: span;
 }
 
 .numbers-item h4 {
     font-size: .3em;
 }
 
-.numbers-item-broke a{
+.numbers-item-broke a {
     text-decoration: line-through;
 }
 
@@ -113,10 +113,41 @@ header .container {
 .song {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
 }
 
 .title {
     font-size: 22px;
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        max-width: 90%;
+    }
+
+    header {
+        height: 40vh; /* Adjusted height for smaller screens */
+    }
+
+    .profile-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-name {
+        font-size: 1.5em;
+    }
+
+    .numbers {
+        grid-template-columns: 1fr 1fr; /* Adjust the grid for smaller screens */
+    }
+
+    .song {
+        display: block; /* Stack items vertically */
+    }
+
+    .title {
+        font-size: 18px;
+    }
 }
