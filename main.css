@@ -12,11 +12,11 @@
 }
 
 body {
-    background-color: var(--bg-color);;
+    background-color: var(--bg-color);
 }
 
 .container {
-    max-width: 640px;
+    max-width: 1240px;
     width: 100%;
     margin: 0 auto;
 }
@@ -61,37 +61,52 @@ header .container {
 .numbers {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
 }
 
-.numbers-item {
+.numbers-item, .numbers-item-broke {
     font-size: 3em;
     font-weight: bold;
     align-content: center;
+    display: grid; /* Added display grid */
+    grid-template-areas: 
+        "img"
+        "a"
+        "span"; /* Set grid areas */
+    gap: 4px; /* Add some gap if needed */
 }
 
-.numbers-item-broke{
-    text-decoration: line-through;
-    /* font-size: 3em; */
-    font-weight: bold;
-    align-content: center;
+.numbers-item img, .numbers-item-broke img {
+    width: 160px; /* Define a largura da imagem */
+    height: 100px; /* Define a altura da imagem */
+    grid-area: img; /* Assign grid area */
+    justify-self: center; /* Center horizontally */
+    align-self: center; /* Center vertically */
+}
+
+.numbers-item a, .numbers-item-broke a {
+    font-size: 16px;
+    grid-area: a; /* Assign the grid area */
+    justify-self: center; /* Center horizontally */
+    align-self: center; /* Center vertically */
+}
+
+.numbers-item span, .numbers-item-broke span {
+    font-size: 15px;
+    grid-area: span; /* Assign grid area */
 }
 
 .numbers-item h4 {
     font-size: .3em;
 }
 
+.numbers-item-broke a{
+    text-decoration: line-through;
+}
+
 .container h3 {
     margin-top: 8px;
     font-size: 22px;
-}
-
-.numbers-item a {
-    font-size: 16px;
-    margin:  none ;
-}
-
-.texto {
-    font-size: 15px;
 }
 
 .song {
@@ -100,7 +115,6 @@ header .container {
     grid-template-columns: 1fr 1fr ;
     align-items: center;
 }
-
 
 .title {
     font-size: 22px;
