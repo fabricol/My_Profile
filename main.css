@@ -85,3 +85,15 @@ header .container {
 .texto {
     font-size: 15px;
 }
+
+.song {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    align-items: center;
+}
+
+
+.title {
+    font-size: 22px;
+}
